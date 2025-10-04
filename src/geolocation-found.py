@@ -6,3 +6,8 @@ def send_location_data():
 
 def receive_location_data():
     return "Location data received successfully."
+
+def geolocation_position_send():
+    return "Geolocation data was sended successfully."
+    
+
