@@ -7,13 +7,15 @@ async def create_tables():
     # используем begin() чтобы выполнить все DDL в транзакции
     async with async_engine.begin() as conn:
         await conn.run_sync(metadata_obj.create_all)
+        await conn.commit()
     async_engine.echo = True
+    
 
-async def insert_data(name, price):
+async def insert_data(name, email):
     async with async_engine.connect() as conn:
         await conn.execute(
-            text("INSERT INTO goods (name, price) VALUES (:name, :price)"),
-            [{"name": name, "price": price}]
+            text("INSERT INTO users (name, email) VALUES (:name, :email)"),
+            [{"name": name, "email": email}]
         )
         await conn.commit()
         

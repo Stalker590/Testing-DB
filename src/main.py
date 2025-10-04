@@ -6,7 +6,7 @@ import asyncio
 
 async def main():
     await create_tables()
-    await insert_data("Bajaj Boxer 150X", 1400)
+    await insert_data("Sigmaboy", "sanyastalker1941@gmai")
 
 if __name__ == "__main__":
     import sys
