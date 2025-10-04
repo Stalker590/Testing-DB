@@ -3,3 +3,6 @@ def geolocation_found():
 
 def send_location_data():
     return "Location data sent successfully."
+
+def receive_location_data():
+    return "Location data received successfully."
